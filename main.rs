@@ -1,11 +1,12 @@
 use std::io;
 
 fn main() {
-	let mut count = 0;
+    let mut count = 0;
     println!("Add one? (Y/n): ");
-	loop {
+    loop {
         let mut input = String::new();
-        io::stdin().read_line(&mut input)
+        io::stdin()
+            .read_line(&mut input)
             .ok()
             .expect("Couldn't read line");
         if input.trim() == "y" || input.trim() == "" {
